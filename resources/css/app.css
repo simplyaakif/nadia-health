@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.iconlist li>span:first-child{
+    @apply bg-db rounded-full mr-4  w-8 h-8 text-lb flex items-center justify-center text-lg
+}
+
+
+.iconlist li>span>span{
+    @apply inline-block
+}
+
+
+.iconlist li{
+    @apply flex items-center
+}
+
+.contact input[type=text]{
+    @apply rounded-md w-full bg-[#ebebeb] border-0
+}
