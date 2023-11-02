@@ -18,11 +18,11 @@
 @if($errors->any())
         <div class="alert alert-danger text-red-600 text-center text-xl my-12 font-bold">Kindly fix the error in below form</div>
 @endif
-<section class="max-w-7xl mx-auto my-12 prose prose-headings:text-center">
+<section class="max-w-7xl mx-auto my-12 prose prose-headings:text-center px-4 lg:px-0">
     {!! $nda !!}
 </section>
 
-<section class="max-w-xl mx-auto mb-8">
+<section class="max-w-xl mx-auto mb-8 px-4 lg:px-0">
     <form action="{{route('nda-submit')}}" method="POST" class="contact space-y-4">
         @csrf
         <input type="text" name="by" placeholder="Enter By">
@@ -37,6 +37,17 @@
         @error('title')
         <div class="alert alert-danger text-red-600">{{ $message }}</div>
         @enderror
+
+        <div>
+        <input type="checkbox" name="accept">
+            <span>
+                I have read & accept NDA
+            </span>
+        </div>
+        @error('accept')
+        <div class="alert alert-danger text-red-600">{{ $message }}</div>
+        @enderror
+
         <button class="w-full py-2 text-center bg-lb text-white rounded-md">Submit</button>
     </form>
 </section>

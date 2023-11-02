@@ -25,7 +25,8 @@
             $request->validate([
                 'by'=>'required',
                 'name'=>'required|min:3|max:16',
-                'title'=>'required|min:3'
+                'title'=>'required|min:3',
+                'accept'=>'required'
                                ]);
 
             return redirect()->route('landing');
