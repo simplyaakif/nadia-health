@@ -30,7 +30,7 @@
                 'accept'=>'required'
                                ]);
 
-            return redirect()->route('landing');
+            return redirect()->route('home');
         }
 
         public function onboarding_submit(Request $request)
