@@ -17,6 +17,6 @@
     @apply flex items-center
 }
 
-.contact input[type=text]{
+.contact input[type=text],.contact input[type=email]{
     @apply rounded-md w-full bg-[#ebebeb] border-0
 }

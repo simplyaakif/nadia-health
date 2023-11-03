@@ -14,14 +14,24 @@
     |
     */
 
-Route::get('/landing', function () {
+
+Route::get('/', function () {
+    return view('onboarding');
+})->name('onboarding');
+
+
+Route::post('/onboarding-submit',[PageController::class,'onboarding_submit'])->name('onboarding-submit');
+
+
+
+Route::get('landing', function () {
     return view('home');
-})->name('landing');
+})->name('home');
 
 Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/', [PageController::class,'nda'])->name('home');
+Route::get('nda', [PageController::class,'nda'])->name('nda');
 
 Route::post('nda-submit', [PageController::class,'nda_submit'])->name('nda-submit');
