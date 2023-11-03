@@ -27,7 +27,6 @@
                 'name'=>'required|min:3|max:16',
                 'email'=>'required|email',
                 'address'=>'required|min:3',
-                'title'=>'required|min:3',
                 'accept'=>'required'
                                ]);
 
@@ -38,7 +37,7 @@
               'email'=>$request->get('email'),
               'meta'=>[
                   'address'=>$request->get('address'),
-                  'title'=>$request->get('title'),
+                  'company'=>$request->get('company'),
               ]
             ];
 

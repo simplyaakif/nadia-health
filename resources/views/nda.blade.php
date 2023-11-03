@@ -34,8 +34,8 @@
             @error('address')
             <div class="alert alert-danger text-red-600">{{ $message }}</div>
             @enderror
-            <input type="text" name="title" placeholder="Enter Title">
-            @error('title')
+            <input type="text" name="company" placeholder="Enter Company">
+            @error('company')
             <div class="alert alert-danger text-red-600">{{ $message }}</div>
             @enderror
 
