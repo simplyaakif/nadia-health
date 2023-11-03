@@ -2,6 +2,7 @@
 
     namespace App\Http\Controllers;
 
+    use App\Models\SignedBy;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\File;
     use Illuminate\Support\Str;
@@ -29,6 +30,20 @@
                 'title'=>'required|min:3',
                 'accept'=>'required'
                                ]);
+
+//            dd($request->all());
+
+            $data = [
+              'name'=>$request->get('name'),
+              'email'=>$request->get('email'),
+              'meta'=>[
+                  'address'=>$request->get('address'),
+                  'title'=>$request->get('title'),
+              ]
+            ];
+
+            $signedBy = SignedBy::create($data);
+
 
             return redirect()->route('home');
         }

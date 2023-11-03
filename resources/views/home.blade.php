@@ -42,7 +42,10 @@
         </div>
     </div>
     <div class="lg:w-3/4 lg:-mt-28">
-        <img src="{{asset('video.png')}}" alt="">
+        <video controls autoplay>
+            <source src="{{asset('vid/vid.mp4')}}">
+        </video>
+{{--        <img src="{{asset('video.png')}}" alt="">--}}
     </div>
 
 </section>
